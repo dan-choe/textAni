@@ -11,7 +11,6 @@ import {
   StyleSheet,
 } from "react-native";
 import * as Animatable from "react-native-animatable";
-import METext from "../components/METext";
 
 const randomize = (max: number) =>
   (Math.random() < 0.5 ? -1 : 1) * Math.random() * max;
@@ -53,15 +52,13 @@ export default function TextAnimation({ amplitude = 5, rotation = 7, msg }) {
         },
       }}
     >
-      <METext
+      <Text
         // transition="fontSize"
         // animation="flash"
         // easing="ease-out"
         // duration={7000}
         // iterationCount="infinite"
-        moreStyle={{ textAlign: "center", fontWeight: "800" }}
-        msg={msg}
-      />
+        style={{ textAlign: "center", fontWeight: "800" }}>{msg}</Text>
     </Animatable.View>
     // </View>
   );
