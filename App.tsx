@@ -8,7 +8,6 @@ import {
   View,
 } from "react-native";
 
-import METext from "./components/METext";
 import TextAnimation from "./components/TextAnimation";
 
 import Apploading from "expo-app-loading";
@@ -85,10 +84,9 @@ export default function App() {
               onPress={() => insertNewMsg()}
             >
               <View style={styles.inputComponent}>
-                <METext
-                  moreStyle={{ textAlign: "center", fontSize: "18px" }}
-                  msg="ERASE"
-                />
+                <Text
+                  style={{ textAlign: "center", fontSize: "18px" }}
+                  >ERASE</Text>
               </View>
             </TouchableOpacity>
             <View style={styles.inputShadow}></View>
